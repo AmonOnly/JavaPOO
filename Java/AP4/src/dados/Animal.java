@@ -89,4 +89,40 @@ public class Animal {
                 ", Altura: '" + getAltura() + "'";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Animal other = (Animal) obj;
+        if (nome == null) {
+            if (other.nome != null)
+                return false;
+        } else if (!nome.equals(other.nome))
+            return false;
+        if (cor == null) {
+            if (other.cor != null)
+                return false;
+        } else if (!cor.equals(other.cor))
+            return false;
+        if (especie == null) {
+            if (other.especie != null)
+                return false;
+        } else if (!especie.equals(other.especie))
+            return false;
+        if (idade != other.idade)
+            return false;
+        if (Float.floatToIntBits(largura) != Float.floatToIntBits(other.largura))
+            return false;
+        if (Float.floatToIntBits(comprimento) != Float.floatToIntBits(other.comprimento))
+            return false;
+        if (Float.floatToIntBits(altura) != Float.floatToIntBits(other.altura))
+            return false;
+        return true;
+    }
+    
+
 }
