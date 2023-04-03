@@ -1,15 +1,16 @@
 package dados;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Diciplina {
     private String nome;
     private int idDiciplina;
-    private ArrayList<Avaliacao> notas;
-    public Diciplina(String nome, int idDiciplina, ArrayList<Avaliacao> notas) {
+    private LinkedList<Estudante> Alunos;
+    
+    public Diciplina(String nome, int idDiciplina, LinkedList<Estudante> alunos) {
         this.nome = nome;
         this.idDiciplina = idDiciplina;
-        this.notas = notas;
+        Alunos = alunos;
     }
     public String getNome() {
         return nome;
@@ -23,11 +24,24 @@ public class Diciplina {
     public void setIdDiciplina(int idDiciplina) {
         this.idDiciplina = idDiciplina;
     }
-    public ArrayList<Avaliacao> getNotas() {
-        return notas;
+    public LinkedList<Estudante> getAlunos() {
+        return Alunos;
     }
-    public void setNotas(ArrayList<Avaliacao> notas) {
-        this.notas = notas;
+    public void setAlunos(LinkedList<Estudante> alunos) {
+        Alunos = alunos;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Diciplina other = (Diciplina) obj;
+        if (idDiciplina != other.idDiciplina)
+            return false;
+        return true;
     }
 
     

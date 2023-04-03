@@ -34,6 +34,5 @@ public class Avaliacao {
     public void setNota(double nota) {
         this.nota = nota;
     }
-
     
 }
