@@ -81,8 +81,8 @@ public class Main {
 
     public static void main(String[] args) {
         int i = -1;
-        Menu();
         while(i!=0){
+            Menu();
             i = Integer.parseInt(scan.nextLine());
             switch(i){
                 case 1:
