@@ -1,16 +1,18 @@
 package dados;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Diciplina {
     private String nome;
     private int idDiciplina;
-    private LinkedList<Estudante> Alunos;
+    private Professor professor;
+    private ArrayList<Estudante> alunos;
     
-    public Diciplina(String nome, int idDiciplina, LinkedList<Estudante> alunos) {
+    public Diciplina(String nome, int idDiciplina, Professor professor, ArrayList<Estudante> alunos) {
         this.nome = nome;
         this.idDiciplina = idDiciplina;
-        Alunos = alunos;
+        this.professor = professor;
+        this.alunos = alunos;
     }
     public String getNome() {
         return nome;
@@ -24,11 +26,14 @@ public class Diciplina {
     public void setIdDiciplina(int idDiciplina) {
         this.idDiciplina = idDiciplina;
     }
-    public LinkedList<Estudante> getAlunos() {
-        return Alunos;
+    public ArrayList<Estudante> getAlunos() {
+        return alunos;
     }
-    public void setAlunos(LinkedList<Estudante> alunos) {
-        Alunos = alunos;
+    public void setAlunos(ArrayList<Estudante> alunos) {
+        this.alunos = alunos;
+    }
+    public void adicionarAluno(Estudante estudante){
+        this.alunos.add(estudante);
     }
     @Override
     public boolean equals(Object obj) {
@@ -43,6 +48,22 @@ public class Diciplina {
             return false;
         return true;
     }
-
+    public Professor getProfessor() {
+        return professor;
+    }
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
     
+    @Override
+    public String toString() {
+        String diciplicaString = "";
+        diciplicaString += "Materia: " + this.nome + "\n" + 
+        "Professor: " + this.professor.getNome() + "\n";
+        for(int i = 0; i < alunos.size();i++){
+            diciplicaString += alunos.get(i).toString() + "\n";
+        }
+        return diciplicaString;
+
+    }
 }

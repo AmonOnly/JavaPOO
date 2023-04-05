@@ -48,9 +48,9 @@ public class Professor {
     public ArrayList<Diciplina> getDiciplinas() {
         return diciplinas;
     }
-    public void setDiciplinas(ArrayList<Diciplina> diciplinas) {
-        this.diciplinas = diciplinas;
-    }
 
+    public void setDiciplinas(Diciplina diciplina){
+        this.diciplinas.add(diciplina);
+    }
     
 }

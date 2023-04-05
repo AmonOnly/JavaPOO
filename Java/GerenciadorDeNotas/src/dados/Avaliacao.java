@@ -34,5 +34,10 @@ public class Avaliacao {
     public void setNota(double nota) {
         this.nota = nota;
     }
+
+    @Override
+    public String toString() {
+        return "Avaliação: " + this.nome + "Data: " + this.data + "Nota: " + this.nota;
+    }
     
 }
