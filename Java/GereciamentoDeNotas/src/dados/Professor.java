@@ -1,11 +1,14 @@
 package dados;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.*;
 
 public class Professor {
     private String nome,cpf,login,senha;
     private int telefone;
-    private ArrayList<Diciplina> diciplinas;
+    private List<Diciplina> diciplinas = new LinkedList<Diciplina>();
+    public Professor(){}
     public Professor(String nome, String cpf, String login, String senha, int telefone,
             ArrayList<Diciplina> diciplinas) {
         this.nome = nome;
@@ -13,7 +16,6 @@ public class Professor {
         this.login = login;
         this.senha = senha;
         this.telefone = telefone;
-        this.diciplinas = diciplinas;
     }
     public String getNome() {
         return nome;
@@ -45,12 +47,16 @@ public class Professor {
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
-    public ArrayList<Diciplina> getDiciplinas() {
+    public List<Diciplina> getDiciplinas() {
         return diciplinas;
     }
 
     public void setDiciplinas(Diciplina diciplina){
         this.diciplinas.add(diciplina);
+    }
+    @Override
+    public String toString() {
+        return "Nome do professor: " + this.nome + "\n";
     }
     
 }

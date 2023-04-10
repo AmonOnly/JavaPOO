@@ -10,6 +10,8 @@ public class Estudante {
     private int idAluno;
     private List<Diciplina> matriculadas = new LinkedList<Diciplina>();
     private Map<Diciplina,List<Avaliacao>> notaDiciplina = new HashMap<Diciplina,List<Avaliacao>>();
+    private Map<Diciplina,Double> mediaDiciplina = new HashMap<Diciplina,Double>();
+    public Estudante(){}
     public Estudante(String nome, String cpf, String email, String curso, String status, int idAluno,
             LinkedList<Diciplina> matriculadas) {
         this.nome = nome;
@@ -59,6 +61,13 @@ public class Estudante {
     public List<Diciplina> getMatriculadas() {
         return matriculadas;
     }
+    
+    public Map<Diciplina, Double> getMediaDiciplina() {
+        return mediaDiciplina;
+    }
+    public void setMediaDiciplina(Diciplina diciplina, double media) {
+        mediaDiciplina.put(diciplina, media);
+    }
     public void adicionarNotas(Diciplina diciplina, Avaliacao avaliacao){
         if(matriculadas.contains(diciplina)){
             notaDiciplina.get(diciplina).add(avaliacao);
@@ -94,6 +103,27 @@ public class Estudante {
     }
     @Override
     public String toString() {
-        return "Nome Aluno: " + this.nome + " Curso: " + this.curso;
+        return "Nome Aluno: " + this.nome + " Curso: " + this.curso + " Status: " + this.status;
+    }
+    public Map<Diciplina, List<Avaliacao>> getNotaDiciplina() {
+        return notaDiciplina;
+    }
+
+    public String exibirNotasDiciplina(Diciplina diciplina){
+        String string = "";
+        string += "Nome Diciplina: " + diciplina.getNome() + " Notas: ";
+        for(int i = 0; i < notaDiciplina.get(diciplina).size();i++){
+            string += notaDiciplina.get(diciplina).get(i);
+        }
+        return string;
+    }
+
+    public String toStringComNotas(){
+        String string = "";
+        string += "Nome Aluno: " + this.nome + " CPF: " + this.cpf +  " Curso: " + this.curso + " Status: " + this.status + "\n";
+        for(int i = 0; i < notaDiciplina.size();i++){
+           string += exibirNotasDiciplina(matriculadas.get(i));
+        }
+        return string;
     }
 }

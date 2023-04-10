@@ -1,0 +1,22 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\leodu\\Downloads\\slf4j-api-1.7.9.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\barcodes-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\font-asian-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\forms-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\hyph-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\io-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\kernel-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\layout-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\pdfa-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\pdftest-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\sign-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\styled-xml-parser-7.1.14.jar",
+        "c:\\Users\\leodu\\Downloads\\iText7-Core-7.1.14-only-jars\\svg-7.1.14.jar"
+    ],
+    "java.project.sourcePaths": [
+        "src",
+        "lib"
+    ]
+}

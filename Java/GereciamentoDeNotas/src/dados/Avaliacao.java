@@ -4,6 +4,7 @@ public class Avaliacao {
     private String nome,data;
     private int peso;
     private double nota;
+    public Avaliacao(){}
     public Avaliacao(String nome, String data, int peso, double nota) {
         this.nome = nome;
         this.data = data;

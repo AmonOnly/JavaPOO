@@ -1,14 +1,14 @@
 package dados;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Diciplina {
     private String nome;
     private int idDiciplina;
     private Professor professor;
-    private ArrayList<Estudante> alunos;
-    
-    public Diciplina(String nome, int idDiciplina, Professor professor, ArrayList<Estudante> alunos) {
+    private List<Estudante> alunos = new LinkedList<Estudante>();
+    public Diciplina(){}
+    public Diciplina(String nome, int idDiciplina, Professor professor, LinkedList<Estudante> alunos) {
         this.nome = nome;
         this.idDiciplina = idDiciplina;
         this.professor = professor;
@@ -26,11 +26,11 @@ public class Diciplina {
     public void setIdDiciplina(int idDiciplina) {
         this.idDiciplina = idDiciplina;
     }
-    public ArrayList<Estudante> getAlunos() {
+    public List<Estudante> getAlunos() {
         return alunos;
     }
-    public void setAlunos(ArrayList<Estudante> alunos) {
-        this.alunos = alunos;
+    public void setAlunos(Estudante alunos) {
+        this.alunos.add(alunos);
     }
     public void adicionarAluno(Estudante estudante){
         this.alunos.add(estudante);
